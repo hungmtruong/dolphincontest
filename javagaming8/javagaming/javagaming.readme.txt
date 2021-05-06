@@ -1,0 +1,99 @@
+This zip file contains everything needed to install the "javagaming" library.
+In addition to this ReadMe file, it contains the following:
+
+- a text file named "javagaming.classpath.txt" containing the elements which 
+  need to be added to the CLASSPATH variable on the machine(s).  
+
+- a text file named "javagaming.path.txt" containing the elements which 
+  need to be added to the PATH variable on the machine(s).
+
+- folders containing the RAGE game engine and libraries used by RAGE:
+  rage165, jogl, joml, jbullet, jinput, luaj, ode4j, graphicslib3D, and vecmath.
+
+- folders containing the libraries used in the 155 textbook: jogl, joml.
+
+
+TO INSTALL THE JAVAGAMING LIBRARY:
+
+There are two versions of "javagaming"... one for Java 8 and one for Java 11.
+You should install whichever one corresponds to your version of the Java JDK.
+
+  The one for Java 8 is called "javagaming8.zip".
+  The one for Java 11 is called "javagaming11.zip".
+
+Before trying to install the "javagaming" libraries, you'll need to MAKE SURE
+that you have properly and completely installed a JAVA JDK on your machine.
+"JDK" means "development kit".  Open a command window and type:  java -version
+If your version is only a JRE, then you'll need to install a JDK before proceeding.
+
+Uncompress either javagaming8.zip or javagaming11.zip depending on your version
+of Java.  Regardless of which one you uncompress, after uncompressing there is a
+folder inside named "javagaming".  That is the folder that you will use.
+
+1) Place the "javagaming" folder in the location where you wish to install the
+   library.  These instructions assume you have placed it at the root of "C:".
+   The path files described below also assume this - i.e., that you have created a
+   folder called "C:\javagaming".
+
+2) Add the elements given in "javagaming.classpath.txt" to the CLASSPATH variable.
+   Note that there are different versions of JOML depending on which version of
+   Java you are using:
+      Java version 11, use:  joml-1.9.25.jar
+      Java version 08, use:  joml-jdk8-1.9.25.jar
+
+3) Add the elements given in "javagaming.path.txt" to the PATH variable.
+
+
+TO TEST THE INSTALLATION (if using RAGE):
+
+1) download and uncompress the "Dolphin Click" program from your instructor's website.
+
+2) open a new command prompt window (must be a new prompt to inherit the updated paths)
+
+3) migrate to the folder containing the "dolphin click" program.
+   Type "compile" and then type "run".
+   This should run a program that displays a rotating dolphin in the middle of the screen.
+   Pressing the "C" key should increment the counter shown at the lower left.
+
+
+TO TEST THE INSTALLATION (if using OpenGL/JOGL for CSc-155):
+
+1) download and uncompress the "Environment Mapping" program from your instructor's website.
+
+2) open a new command prompt window (must be a new prompt to inherit the updated paths)
+
+3) migrate to the folder containing the "environment mapping" program.
+   Type "compile.bat" and then "run.bat".
+   This should run a program that displays a rotating chrome torus with a lake and mountains
+    in the background.
+
+
+Additional notes:
+
+- The PATH and CLASSPATH descriptions in "javagaming.path.txt" and 
+"javagaming.classpath.txt" assume that the library is extracted
+to "C:\", producing "C:\javagaming" as described above.  If the library is
+extracted to a different location then the PATH and CLASSPATH elements in 
+"javagaming.path.txt" and "javagaming.classpath.txt" must be adjusted accordingly.
+
+- Linux and MacOSX users must make the appropriate changes to the PATH and
+CLASSPATH variables, which are given in Windows format.  Under Linux the native 
+library (".so") file paths must be added to the LD_LIBRARY_PATH environment 
+variable (which you will have to create if it doesn’t already exist); under 
+Mac OS X they should be added to the DYLD_LD_LIBRARY_PATH environment variable.
+
+- The PATH must include the path to a Java 1.8 JDK or Java 11 JDK.
+Java JRE is NOT sufficient.
+
+- Using a 32-bit windows machine is no longer recommended.  If you want to try,
+then the "javagaming/jinput/lib/jinput-dx8_64.dll" may need to be deleted
+(or better, temporarily renamed) and then the file 
+"javagaming/jinput/lib/XXXjinput-dx8.dll" renamed to "jinput-dx8.dll".
+
+- Most of the javagaming components include a "javadoc" directory containing the
+Java documentation for the component.  To read the documentation, navigate to the
+desired "javadoc" directory and open the file "index.html" in a browser.
+The JOML javadoc can be found by searching "JOML javadoc" in Google.
+
+- It is recommended that you bookmark the javadocs for RAGE, JOGL, and JOML
+in your browser.  You will need to refer to them throughout the course.

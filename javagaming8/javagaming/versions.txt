@@ -1,0 +1,8 @@
+RAGE - Ray's Awesome Game Engine
+Version 2020 for Java 8 (April 27, 2018)
+
+JOGL 2.4.0 pre-release (March 6, 2020)
+
+JInput 2.0.9 (June 1, 2018)
+
+JOML 1.9.25 (May 31, 2020)

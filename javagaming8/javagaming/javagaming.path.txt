@@ -1,0 +1,5 @@
+%JAVA_HOME%\bin
+c:\javagaming\jinput\lib
+
+Also, make sure that the JAVA_HOME environment variable contains a reference
+to the Java JDK,not the JRE.
